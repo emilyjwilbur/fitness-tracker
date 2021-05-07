@@ -1,6 +1,16 @@
 const router = require('express').Router();
 const Workout = require('../models/workout');
 
+router.get('/api/workouts', (req, res) => {
+    Workout.find({})
+    .sort({ date: -1 })
+    .then(workouts => {
+        res.json(workouts);
+    }).catch(err => {
+        res.status(400).json(err);
+});
+});
+
 router.post('/api/workouts', (req, res) => {
     Workout.create({}).then(data => {
         console.log(data);
@@ -18,9 +28,12 @@ router.put('/api/workouts:id', (req, res) => {
         {$push: {exercises: req.body }},
     ).then((data) => {
         res.json(data);
-}).catch( err => {
+}).catch(err => {
     res.json(err);
-    })
+    });
 });
+
+
+
 
 module.exports = router;
