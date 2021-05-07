@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
+    "morgan": "^1.10.0",
+    "seed": "^0.4.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +24,5 @@
   "bugs": {
     "url": "https://github.com/emilyjwilbur/fitness-tracker/issues"
   },
-  "homepage": "https://github.com/emilyjwilbur/fitness-tracker#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.12.7",
-    "node-modules": "^1.0.1"
-  }
+  "homepage": "https://github.com/emilyjwilbur/fitness-tracker#readme"
 }
