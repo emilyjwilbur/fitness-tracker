@@ -11,6 +11,20 @@ router.get('/api/workouts', (req, res) => {
 });
 });
 
+// get route to dashboard/range
+router.get('/api/workouts/range', (req, res) => {
+    Workout.find({})
+    .sort({ date: -1 })
+    .then((workouts) => {
+        res.status(200).json(workouts);
+    })
+    .catch((err) => {
+        res.status(400).json(workouts)
+    });
+});
+
+
+// post workout route
 router.post('/api/workouts', (req, res) => {
     Workout.create({})
         .then(data => {
@@ -23,7 +37,7 @@ router.post('/api/workouts', (req, res) => {
 
 
 // adding exercise
-router.put('/api/workouts:id', (req, res) => {
+router.put('/api/workouts/:id', (req, res) => {
     Workout.findByIdAndUpdate(
         req.params.id,
         {$push: {exercises: req.body }},
