@@ -11,6 +11,7 @@ As a user, I want to be able to view create and track daily workouts.
 ## Screenshots
 
 ![Screen Shot 2021-05-07 at 10 16 33 PM](https://user-images.githubusercontent.com/79462454/117522736-08e90e80-af83-11eb-93e5-497378c48b73.png)
+![Screen Shot 2021-05-07 at 10 31 33 PM](https://user-images.githubusercontent.com/79462454/117522931-09ce7000-af84-11eb-998a-5c5b88fd31ca.png)
 ![Screen Shot 2021-05-07 at 10 16 58 PM](https://user-images.githubusercontent.com/79462454/117522741-0c7c9580-af83-11eb-9720-913fa23474fe.png)
 
 ## Needs Fixed (to-do):
